@@ -127,6 +127,13 @@ def Rotaciones_en_los_ejes():
     print(f"Matriz de rotación en el eje X:\n{Rotacion_en_X}")
     print(f"Matriz de rotación en el eje Y:\n{Rotacion_en_Y}")
 
+matriz_z, matriz_x, matriz_y = Rotaciones_en_los_ejes()
+
+print("\n--- Matrices fueron3 retornadas ---")
+print(f"Matriz Z retornada:\n{matriz_z}")
+print(f"Matriz X retornada:\n{matriz_x}")
+print(f"Matriz Y retornada:\n{matriz_y}")
+
 
 #### Punto 6 del taller 1
 diametro_del_embolo= 30 #en milimetros

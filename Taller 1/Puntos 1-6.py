@@ -121,11 +121,20 @@ def Rotaciones_en_los_ejes():
 
     print(f"Ángulo inicial en grados es: {Angulo_inicial}°")
     print(f"Ángulo convertido a radianes es: {Angulo_radianes:.2f} radianes")
-    print(f"Coseno del ángulo dado es: {Coseno_del_angulo:.3f}°")
-    print(f"Seno del ángulo dado es: {Seno_del_angulo:.3f}°")
+    print(f"Coseno del ángulo dado es: {Coseno_del_angulo:.3f}")
+    print(f"Seno del ángulo dado es: {Seno_del_angulo:.3f}")
     print(f"Matriz de rotación en el eje Z:\n{Rotacion_en_Z}")
     print(f"Matriz de rotación en el eje X:\n{Rotacion_en_X}")
     print(f"Matriz de rotación en el eje Y:\n{Rotacion_en_Y}")
+
+    return Rotacion_en_Z, Rotacion_en_X, Rotacion_en_Y
+
+matriz_z, matriz_x, matriz_y = Rotaciones_en_los_ejes()
+
+print("\n--- Las matrices fueron retornadas ---")
+print(f"Matriz Z retornada:\n{matriz_z}")
+print(f"Matriz X retornada:\n{matriz_x}")
+print(f"Matriz Y retornada:\n{matriz_y}")
 
 
 #### Punto 6 del taller 1
@@ -150,14 +159,14 @@ def fuerza_de_avance_y_retroceso_del_cilindro():
 
 ### RESULTADOS DE LOS PUNTOS 1 - 6 DEL TALLER 1
 if __name__ == "__main__":
-   operaciones_del_vector()
+   #operaciones_del_vector()
 
-   operacion_del_matriz()
+   #operacion_del_matriz()
 
-   conversion_de_coordenadas_CR_a_CCI_y_CE(X,Y,Z)
+   #conversion_de_coordenadas_CR_a_CCI_y_CE(X,Y,Z)
 
-   Calculo_de_la_PT100()
+   #Calculo_de_la_PT100()
 
    Rotaciones_en_los_ejes()
 
-   fuerza_de_avance_y_retroceso_del_cilindro()
+   #fuerza_de_avance_y_retroceso_del_cilindro()
