@@ -95,11 +95,12 @@ def Calculo_de_la_PT100():
 
 
 #### Punto 5 del taller 1
-def Rotaciones_en_los_ejes(Angulo_inicial):
+def Rotaciones_en_los_ejes():
+    Angulo_inicial= 65 #dado en grados
     Angulo_radianes= math.radians(Angulo_inicial) #Convertir el ángulo a radianes, funciona para las funciones trigonométricas en Python
     Coseno_del_angulo= math.cos(Angulo_radianes)
     Seno_del_angulo= math.sin(Angulo_radianes)
-    
+
     Rotacion_en_Z= np.array([
         [Coseno_del_angulo, -Seno_del_angulo, 0],
         [Seno_del_angulo, Coseno_del_angulo, 0],
@@ -120,22 +121,18 @@ def Rotaciones_en_los_ejes(Angulo_inicial):
 
     print(f"Ángulo inicial en grados es: {Angulo_inicial}°")
     print(f"Ángulo convertido a radianes es: {Angulo_radianes:.2f} radianes")
-    print(f"Coseno del ángulo dado es: {Coseno_del_angulo:.3f}")
-    print(f"Seno del ángulo dado es: {Seno_del_angulo:.3f}")
+    print(f"Coseno del ángulo dado es: {Coseno_del_angulo:.3f}°")
+    print(f"Seno del ángulo dado es: {Seno_del_angulo:.3f}°")
     print(f"Matriz de rotación en el eje Z:\n{Rotacion_en_Z}")
     print(f"Matriz de rotación en el eje X:\n{Rotacion_en_X}")
     print(f"Matriz de rotación en el eje Y:\n{Rotacion_en_Y}")
 
-    return Rotacion_en_Z, Rotacion_en_X, Rotacion_en_Y
-
 matriz_z, matriz_x, matriz_y = Rotaciones_en_los_ejes()
 
-print("\n--- Las matrices fueron retornadas ---")
+print("\n--- Matrices fueron3 retornadas ---")
 print(f"Matriz Z retornada:\n{matriz_z}")
 print(f"Matriz X retornada:\n{matriz_x}")
 print(f"Matriz Y retornada:\n{matriz_y}")
-print("\n--- Fin de la función de rotaciones ---")
-print(f"matriz_z: {mx}")
 
 
 #### Punto 6 del taller 1
@@ -169,8 +166,5 @@ if __name__ == "__main__":
    Calculo_de_la_PT100()
 
    Rotaciones_en_los_ejes()
-   angulo_inicial = 65 # Ejemplo de ángulo inicial en grados
-   mz,mx,my = Rotaciones_en_los_ejes(angulo_inicial)
-
 
    fuerza_de_avance_y_retroceso_del_cilindro()
